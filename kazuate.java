@@ -1,8 +1,10 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class kazuate {
     public static void main(String[] args) {
-        int answer = 57; // プログラマが設定する2桁の正の整数
+        Random rand = new Random();
+        int answer = rand.nextInt(90) + 10; // プログラマが設定する2桁の正の整数
         int maxTries = 5;
         Scanner scanner = new Scanner(System.in);
 
