@@ -19,7 +19,11 @@ public class kazuate {
                 break;
             } else {
                 int diff = Math.abs(guess - answer);
-                if (guess > answer) {
+                if(guess < 10 || guess > 99) {
+                    System.out.println("2桁の正の整数を入力してください。");
+                    i--; // 無効な入力の場合、カウントを戻す
+                    continue;
+                }else if (guess > answer) {
                     System.out.print("設定された数より大きいです。");
                 } else {
                     System.out.print("設定された数より小さいです。");
